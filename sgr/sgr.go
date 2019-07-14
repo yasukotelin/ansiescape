@@ -120,8 +120,8 @@ func BgColor(x int) SGR {
 	return SGR(fmt.Sprintf("%v%v", bgExColor, x))
 }
 
-// EscSeq returns created ANSI Escape sequence by sgrs
-func EscSeq(sgrs ...SGR) string {
+// MakeString returns created ANSI Escape sequence by sgrs
+func MakeString(sgrs ...SGR) string {
 	return fmt.Sprintf("%v[%vm", esc, join(sgrs))
 }
 

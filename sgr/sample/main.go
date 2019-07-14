@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	clear := sgr.EscSeq(sgr.Clear)
-	seq := sgr.EscSeq(sgr.BgColor(55), sgr.FgWhite)
+	clear := sgr.MakeString(sgr.Clear)
+	seq := sgr.MakeString(sgr.BgColor(55), sgr.FgWhite)
 
 	fmt.Printf("%vhello, world%v", seq, clear)
 }
